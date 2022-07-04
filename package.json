@@ -1,20 +1,33 @@
 {
   "name": "create-react-app-lite",
   "version": "1.0.0",
-  "description": "",
+  "description": "create-react-app-lite",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint --fix .",
+    "prettier": "prettier --write .",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/eggfreitag/create-react-app-lite.git"
   },
-  "keywords": ["create-react-app", "react-boilerplate"],
+  "keywords": [
+    "create-react-app",
+    "react-boilerplate"
+  ],
   "author": "eggfreitag",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/eggfreitag/create-react-app-lite/issues"
   },
-  "homepage": "https://github.com/eggfreitag/create-react-app-lite#readme"
+  "homepage": "https://github.com/eggfreitag/create-react-app-lite#readme",
+  "devDependencies": {
+    "eslint": "^8.19.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.30.1",
+    "husky": "^8.0.0",
+    "prettier": "^2.7.1"
+  }
 }
