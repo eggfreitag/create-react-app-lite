@@ -1,0 +1,10 @@
+{
+  "name": "react-scripts-lite",
+  "version": "1.0.0",
+  "description": "react-scripts-lite",
+  "bin": {
+    "react-scripts-lite": "./bin/react-scripts-lite.js"
+  },
+  "author": "eggfreitag",
+  "license": "MIT"
+}
