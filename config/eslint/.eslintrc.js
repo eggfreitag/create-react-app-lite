@@ -1,6 +1,7 @@
 module.exports = {
   extends: ["eslint:recommended", "plugin:prettier/recommended"],
   plugins: ["react", "prettier"],
+  ignorePatterns: ["../../node_modules/**"],
   env: {
     browser: true,
     jest: true,
@@ -8,10 +9,12 @@ module.exports = {
     node: true,
   },
   parserOptions: {
-    ecmaVersion: 6,
+    ecmaVersion: 2020,
     ecmaFeatures: {
       jsx: true,
     },
   },
-  rules: {},
+  rules: {
+    "no-unused-vars": ["warn", { vars: "local" }],
+  },
 };
