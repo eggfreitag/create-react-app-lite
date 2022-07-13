@@ -17,7 +17,7 @@ const runCommand = (command) => {
 };
 
 const dirName = process.argv[2];
-const gitCheckoutCommand = `git clone --depth 1 https://github.com/eggfreitag/react-app-lite ${dirName}`;
+const gitCheckoutCommand = `git clone --depth 1 https://github.com/eggfreitag/create-react-app-lite ${dirName}`;
 const npmInstallCommand = `cd ${dirName} && npm install`;
 
 console.log(`Creating a new React app in ${path.resolve(__dirname, dirName)}`);
