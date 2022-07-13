@@ -3,4 +3,3 @@ node_modules/
 package-lock.json
 .github/
 .husky/
-../../node_modules
