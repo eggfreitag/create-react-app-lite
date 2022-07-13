@@ -4,12 +4,11 @@
   "description": "create-react-app-lite",
   "main": "index.js",
   "scripts": {
-    "prepare": "husky install",
-    "lint": "eslint -c ./config/eslint/.eslintrc.js --fix .",
-    "prettier": "prettier --config ./config/prettier/.prettierrc.js --write .",
-    "build": "rm -rf build && webpack --watch --mode production --config ./config/webpack.config.js",
-    "start": "npx webpack serve --mode development --config ./react-scripts-lite/config/webpack.config.js",
-    "dev": "node ./react-scripts-lite/bin/react-scripts-lite.js"
+    "start": "react-scripts-lite start",
+    "build": "react-scripts-lite build",
+    "lint": "eslint -c config/eslint/.eslintrc.js --ignore-path config/eslint/.eslintignore --fix .",
+    "prettier": "prettier --config config/prettier/.prettierrc.js --ignore-path config/prettier/.prettierignore --write .",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -26,7 +25,6 @@
   },
   "homepage": "https://github.com/eggfreitag/create-react-app-lite#readme",
   "dependencies": {
-    "process": "^0.11.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^5.3.5"
@@ -52,6 +50,8 @@
     "mini-css-extract-plugin": "^2.6.1",
     "postcss-loader": "^7.0.0",
     "prettier": "^2.7.1",
+    "process": "^0.11.10",
+    "react-scripts-lite": "^1.0.3",
     "resolve-url-loader": "^5.0.0",
     "sass-loader": "^13.0.2",
     "style-loader": "^3.3.1",
