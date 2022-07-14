@@ -1,6 +1,6 @@
 {
   "name": "create-react-app-lite",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "A React Boilerplate from scratch using Javascript, Webpack, ESLint, Prettier, and Jest",
   "bin": "./bin/cli.js",
   "scripts": {
