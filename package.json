@@ -6,6 +6,7 @@
   "scripts": {
     "start": "react-scripts-lite start",
     "build": "react-scripts-lite build",
+    "test": "react-scripts-lite test",
     "lint": "eslint -c config/eslint/.eslintrc.js --ignore-path config/eslint/.eslintignore --fix .",
     "prettier": "prettier --config config/prettier/.prettierrc.js --ignore-path config/prettier/.prettierignore --write .",
     "prepare": "husky install"
@@ -34,7 +35,7 @@
     "jest": "^28.1.2",
     "postcss-loader": "^7.0.1",
     "prettier": "^2.7.1",
-    "react-scripts-lite": "^1.0.3",
+    "react-scripts-lite": "^1.0.5",
     "style-loader": "^3.3.1",
     "styled-components": "^5.3.5"
   }
