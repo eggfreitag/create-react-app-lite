@@ -10,6 +10,5 @@ const root = createRoot(container);
 root.render(
   <>
     <App />
-    <p>Should be rendered after App component</p>
   </>,
 );
