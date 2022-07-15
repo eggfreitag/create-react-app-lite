@@ -10,11 +10,13 @@ module.exports = {
   },
   parserOptions: {
     ecmaVersion: 2020,
+    sourceType: "module",
     ecmaFeatures: {
       jsx: true,
     },
   },
   rules: {
     "no-unused-vars": ["warn", { vars: "local" }],
+    allowImportExportEverywhere: 0,
   },
 };
