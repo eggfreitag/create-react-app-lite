@@ -21,7 +21,8 @@ const runCommand = (command) => {
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const dirName = process.argv[2];
 const gitCheckoutCommand = `git clone --depth 1 https://github.com/eggfreitag/create-react-app-lite ${dirName}`;
-const npmInstallCommand = `cd ${dirName} && npm install`;
+const npmInstallCommand = `cd ${dirName} && npm install && rm -rf .github bin && git add .`;
+
 
 // Create new create-react-app-lite
 console.log(
