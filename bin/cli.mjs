@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 
-const execSync = require("child_process").execSync;
-const chalk = require("chalk");
-const path = require("path");
+import { execSync } from "child_process";
+import { fileURLToPath } from "url";
+import chalk from "chalk";
+import path from "path";
 
 const runCommand = (command) => {
   try {
@@ -17,16 +18,17 @@ const runCommand = (command) => {
   }
 };
 
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const dirName = process.argv[2];
 const gitCheckoutCommand = `git clone --depth 1 https://github.com/eggfreitag/create-react-app-lite ${dirName}`;
-const npmInstallCommand = `cd ${dirName} && npm install && rm -rf .github bin && git add .`;
+const npmInstallCommand = `cd ${dirName} && npm install`;
 
 // Create new create-react-app-lite
 console.log(
   chalk.blueBright(`Creating a new React app in`),
   chalk.magentaBright.bold.italic.underline(
-    `${path.resolve(__dirname, `../${dirName}`)}`
-  )
+    `${path.resolve(process.cwd(), `../../../../${dirName}`)}`,
+  ),
 );
 const checkedOut = runCommand(gitCheckoutCommand);
 if (!checkedOut) {
@@ -36,7 +38,7 @@ if (!checkedOut) {
 // Install dependencies
 console.log(
   chalk.blueBright.bold(`Installing dependencies for`),
-  chalk.redBright.bold(`${dirName}`)
+  chalk.redBright.bold(`${dirName}`),
 );
 const installedDeps = runCommand(npmInstallCommand);
 if (!installedDeps) {
@@ -51,7 +53,7 @@ console.log(
   chalk.redBright.bold(`${dirName}`),
   `at`,
   chalk.magentaBright.bold.italic.underline(
-    `${path.resolve(__dirname, `../${dirName}`)}`
+    `${path.resolve(__dirname, `../${dirName}`)}`,
   ),
   "\n\n",
   `Inside`,
@@ -95,5 +97,5 @@ console.log(
   "\n",
   chalk.yellowBright.bold("npm start"),
   "\n\n",
-  chalk.cyanBright.bold("Enjoy it!")
+  chalk.cyanBright.bold("Enjoy it!"),
 );
