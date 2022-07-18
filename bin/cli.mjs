@@ -51,7 +51,7 @@ console.log(
   chalk.redBright.bold(`${dirName}`),
   `at`,
   chalk.magentaBright.bold.italic.underline(
-    `${path.resolve(process.cwd(), `../${dirName}`)}`,
+    `${path.resolve(process.cwd(), dirName)}`,
   ),
   "\n\n",
   `Inside`,
