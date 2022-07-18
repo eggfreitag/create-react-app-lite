@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 import { execSync } from "child_process";
-import { fileURLToPath } from "url";
 import chalk from "chalk";
 import path from "path";
 
@@ -18,16 +17,15 @@ const runCommand = (command) => {
   }
 };
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const dirName = process.argv[2];
 const gitCheckoutCommand = `git clone --depth 1 https://github.com/eggfreitag/create-react-app-lite ${dirName}`;
-const npmInstallCommand = `cd ${dirName} && npm install`;
+const npmInstallCommand = `cd ${dirName} && npm install && rm -rf .git* bin`;
 
 // Create new create-react-app-lite
 console.log(
   chalk.blueBright(`Creating a new React app in`),
   chalk.magentaBright.bold.italic.underline(
-    `${path.resolve(process.cwd(), `../../../../${dirName}`)}`,
+    `${path.resolve(process.cwd(), dirName)}`,
   ),
 );
 const checkedOut = runCommand(gitCheckoutCommand);
@@ -53,7 +51,7 @@ console.log(
   chalk.redBright.bold(`${dirName}`),
   `at`,
   chalk.magentaBright.bold.italic.underline(
-    `${path.resolve(__dirname, `../${dirName}`)}`,
+    `${path.resolve(process.cwd(), `../${dirName}`)}`,
   ),
   "\n\n",
   `Inside`,
