@@ -1,9 +1,8 @@
-import React, { lazy } from "react";
+import React from "react";
 import styled, { keyframes } from "styled-components";
 
 import logo from "../assets/logo.png";
-
-const Count = lazy(() => import("./Count"));
+import Count from "./Count";
 
 const App = () => {
   return (
