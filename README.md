@@ -39,10 +39,6 @@
 > `File System`모듈에 대한 이해가 필요했고 `NodeJS`내부 모듈 `Readline`의 사용으로 외부 라이브러리(`CRA`의 경우 `Prompts`) 없이 `eject`실행 여부를 재확인하는 콘솔을 출력했습니다.<br>
 > 결국 이 프로젝트의 핵심은 **프로세스의 흐름**과 **NodeJS에 대한 보다 깊은 이해**였습니다.<br>
 > `NodeJS`의 프로세스 안에서 프로세스를 실행할 수 있게 해주는 `Child_Process`에 관해 처음 공부했고 서로 얽혀있는 파일들의 관계를 파악하고 필요 여부를 검증하면서 `NodeJS`에 말그대로 "Deep dive"했습니다.
-<<<<<<< HEAD
-=======
-
->>>>>>> e076ceb (docs: README 수정)
 
 </details>
 <br>
